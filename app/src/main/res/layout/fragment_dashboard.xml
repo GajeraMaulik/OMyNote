@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fragments.DashboardFragment">
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/progress_Fd"
+        android:layout_width="@dimen/_300sdp"
+        android:layout_height="@dimen/_300sdp"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedScroll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+      app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints,UnknownId">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/_170sdp"
+            app:layout_constraintBottom_toTopOf="@+id/tvPreviousScents">
+
+
+
+            <TextView
+                android:id="@+id/tvPreviousScents"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_20sdp"
+                android:fontFamily="@font/pulpdisplay_light"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:gravity="center"
+                android:text="Your previous scents"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/_15sdp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:ignore="MissingConstraints,UnusedAttribute" />
+
+            <TextView
+                android:id="@+id/tvSeeAll"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_20sdp"
+                android:fontFamily="@font/pulpdisplay_mediumd"
+                android:layout_marginEnd="@dimen/_30sdp"
+                android:textAllCaps="true"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:gravity="center"
+                android:text="See All"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/_12sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tvPreviousScents"
+                app:layout_constraintBottom_toBottomOf="@+id/tvPreviousScents"
+                tools:ignore="MissingConstraints,UnusedAttribute" />
+
+            <ImageButton
+                android:id="@+id/btnPrevious"
+                android:layout_width="@dimen/_10sdp"
+                android:layout_height="@dimen/_10sdp"
+                android:src="@drawable/leftarrow"
+                android:layout_marginEnd="@dimen/_15sdp"
+                app:layout_constraintTop_toTopOf="@+id/tvPreviousScents"
+                app:layout_constraintBottom_toBottomOf="@+id/tvPreviousScents"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:background="@android:color/transparent"
+                tools:ignore="ContentDescription,MissingConstraints" />
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvPreviousScents"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:layout_marginTop="@dimen/_15sdp"
+                android:paddingTop="@dimen/_5sdp"
+                android:paddingBottom="@dimen/_10sdp"
+                android:orientation="vertical"
+                tools:listitem="@layout/view_previous_scents"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvPreviousScents"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:id="@+id/tvWishlist"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_20sdp"
+                android:fontFamily="@font/pulpdisplay_light"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:gravity="center"
+                android:text="Your Wishlist"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/_15sdp"
+                app:layout_constraintTop_toBottomOf="@+id/rvPreviousScents"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:ignore="MissingConstraints,UnusedAttribute" />
+
+            <TextView
+                android:id="@+id/tvSeeAll_Wishlist"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_marginEnd="@dimen/_30sdp"
+                android:fontFamily="@font/pulpdisplay_mediumd"
+                android:textAllCaps="true"
+                android:gravity="center"
+                android:text="See All"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/_12sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tvWishlist"
+                app:layout_constraintBottom_toBottomOf="@+id/tvWishlist"
+                tools:ignore="MissingConstraints,UnusedAttribute" />
+
+            <ImageButton
+                android:id="@+id/btnWishlist"
+                android:layout_width="@dimen/_10sdp"
+                android:layout_height="@dimen/_10sdp"
+                android:src="@drawable/leftarrow"
+                android:layout_marginEnd="@dimen/_15sdp"
+                app:layout_constraintTop_toTopOf="@+id/tvWishlist"
+                app:layout_constraintBottom_toBottomOf="@+id/tvWishlist"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:background="@android:color/transparent"
+                tools:ignore="ContentDescription,MissingConstraints" />
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvWishlist"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:paddingTop="@dimen/_5sdp"
+                android:paddingBottom="@dimen/_10sdp"
+                tools:listitem="@layout/view_wishlist"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvWishlist"
+                tools:ignore="MissingConstraints" />
+
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+    <RelativeLayout
+        android:id="@+id/bottomView"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_120sdp"
+
+        android:background="@drawable/custom_toolbar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:id="@+id/title_Dashboard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_20sdp"
+            android:fontFamily="@font/pulpdisplay_bold"
+            android:text="ASK OLIMPIA"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_20sdp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/title_Dashboard"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_20sdp"
+            android:lineHeight="@dimen/_20sdp"
+            android:layout_marginBottom="@dimen/_20sdp"
+            android:fontFamily="@font/pulpdisplay_regular"
+            android:text="Find fragrance that matches\nYOU with us in seconds!"
+            android:textColor="@color/txtsubtitle"
+            android:textSize="@dimen/_12sdp" />
+
+        <Button
+            android:id="@+id/btnNext"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:background="@drawable/bg_btn"
+
+            app:icon="@drawable/rightarrow"
+            app:iconSize = "@dimen/_30sdp"
+            android:gravity="center_horizontal|center_vertical"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/_25sdp"
+            app:backgroundTint="@null"
+            android:layout_alignParentEnd="true"
+            />
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

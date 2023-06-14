@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#00092F</color>
+    <color name="colorPrimaryVariant">#CFB992</color>
+    <color name="colorOnPrimary">#FFFFFFFF</color>
+
+
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="txttitle">#2D2D2D</color>
+    <color name="txtsubtitle">#B8B8B8</color>
+    <color name="bgsubtitle">#BFB7A9</color>
+    <color name="bgbtn">#CFB992</color>
+    <color name="sidemenu">#DFD1B8</color>
+    <color name="rbbtn">#000F4B</color>
+    <color name="unselectedlogo">#9C9C9C</color>
+    <color name="invisible">#D8D8D8</color>
+    <color name="selectitem">#A9BCD0</color>
+    <color name="subtle">#1E3962</color>
+    <color name="strong">#5D86C1</color>
+    <color name="bgLogin">#F0F2F3</color>
+    <color name="bgLogins">#E5E5E5</color>
+    <color name="bglogin">#606060</color>
+    <color name="error">#FF0000</color>
+    <color name="transparent">#00000000</color>
+    <color name="bgMarker">#CDDBED</color>
+    <color name="light_blue_600">#FF039BE5</color>
+    <color name="light_blue_900">#FF01579B</color>
+    <color name="light_blue_A200">#FF40C4FF</color>
+    <color name="light_blue_A400">#FF00B0FF</color>
+    <color name="black_overlay">#66000000</color>
+    <color name="lasting_bg">#AFBFD7</color>
+
+
+</resources>

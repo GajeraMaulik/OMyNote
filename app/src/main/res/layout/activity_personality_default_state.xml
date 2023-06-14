@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context=".Views.PersonalityDefaultStateActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolBar_Ds"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints">
+
+
+        <ImageView
+            android:id="@+id/icBack_Ds"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:src="@drawable/ic_left"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/pulpdisplay_mediumd"
+
+            android:textAllCaps="true"
+            android:textSize="@dimen/_15sdp"
+            android:textColor="@color/white"
+            android:text="Your Mood Analysis"/>
+
+
+
+    </androidx.appcompat.widget.Toolbar>
+
+
+
+    <com.github.mikephil.charting.charts.RadarChart
+        android:id="@+id/radarChart"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_300sdp"
+        android:scaleX="1.0"
+        android:scaleY="1.0"
+        android:layout_centerHorizontal="true"
+        app:layout_constraintTop_toBottomOf="@+id/toolBar_Ds"
+        tools:ignore="MissingConstraints" />
+
+
+
+    <ImageView
+        android:id="@+id/animation_Ds"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_300sdp"
+        android:scaleX="1.1"
+        android:scaleY="1.1"
+        android:layout_centerHorizontal="true"
+        app:layout_constraintTop_toBottomOf="@+id/toolBar_Ds"
+        tools:ignore="MissingConstraints" />
+    <ImageView
+        android:id="@+id/personalityAnimation_Ds"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_300sdp"
+        android:scaleX="0.9"
+        android:scaleY="0.9"
+        android:layout_centerHorizontal="true"
+        app:layout_constraintTop_toBottomOf="@+id/toolBar_Ds"
+        tools:ignore="MissingConstraints" />
+ <!--   <com.anychart.AnyChartView
+        android:id="@+id/any_chart_view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_300sdp"
+        tools:ignore="MissingConstraints" />-->
+    <TextView
+        android:id="@+id/mainTitle_Ds"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:lineHeight="@dimen/_45sdp"
+        android:fontFamily="@font/pulpdisplay_regular"
+        android:textSize="@dimen/_35sdp"
+        android:gravity="center"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@+id/radarChart"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/subTitle_Ds"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_25sdp"
+        android:fontFamily="@font/pulpdisplay_regular"
+        android:textSize="@dimen/_15sdp"
+        android:gravity="center"
+        android:textColor="@color/bgsubtitle"
+        app:layout_constraintTop_toBottomOf="@+id/mainTitle_Ds"
+        tools:ignore="MissingConstraints" />
+
+
+    <CheckBox
+        android:id="@+id/favorite_Ds"
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:visibility="gone"
+        android:layout_marginTop="@dimen/_40sdp"
+        android:button="@drawable/personalitylike_selector"
+        android:layout_marginStart="@dimen/_20sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/subTitle_Ds"
+        tools:ignore="MissingConstraints" />
+
+
+    <Button
+        android:id="@+id/btnNext_Ds"
+        android:layout_width="@dimen/_50sdp"
+        android:layout_height="@dimen/_50sdp"
+        app:icon="@drawable/ic_right_ds"
+        app:iconSize = "@dimen/_10sdp"
+        android:visibility="gone"
+        style="@style/Widget.MaterialComponents.Button.Icon"
+        app:iconPadding="@dimen/_1sdp"
+        app:backgroundTint="@null"
+        app:iconGravity="textEnd"
+        android:background="@drawable/bg_btn"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_50sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/subTitle_Ds"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

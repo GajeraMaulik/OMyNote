@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <style name="navigationView" parent="Widget.Design.NavigationView">
+        <item name="fontFamily">@font/pulpdisplay_bold</item>
+        <item name="itemTextColor">@color/colorPrimary</item>
+        <item name="itemTextAppearanceInactive">@font/pulpdisplay_regular</item>
+        <item name="itemTextAppearanceActive">@font/pulpdisplay_bold</item>
+    </style>
+
+    <style name="Widget.Theme.OMyNote.ButtonBar.Fullscreen" parent="">
+        <item name="android:background">@color/black_overlay</item>
+        <item name="android:buttonBarStyle">?android:attr/buttonBarStyle</item>
+    </style>
+
+    <style name="CircularDeterminateProgressBar">
+        <item name="android:indeterminateOnly">false </item>
+        <item name="android:progressDrawable">@drawable/bg_fill_progress</item>
+    </style>
+</resources>

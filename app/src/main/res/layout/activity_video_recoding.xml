@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context=".Views.VideoRecodingActivity">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolBar_Video"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/pulpdisplay_regular"
+            android:textAllCaps="true"
+            android:textSize="@dimen/_15sdp"
+            android:textColor="@color/white"
+            android:text="SHARE"/>
+
+        <ImageView
+            android:id="@+id/icClose_Video"
+            android:layout_width="@dimen/_15sdp"
+            android:layout_height="@dimen/_15sdp"
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:layout_gravity="end"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/ic_close_wt"/>
+
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/_70sdp"
+        android:background="@android:color/transparent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:ignore="MissingConstraints">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/constraint_guideline_vertical_leading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.12"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/constraint_guideline_vertical_leading1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.20"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/constraint_guideline_vertical_shutter_leading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.40"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/constraint_guideline_vertical_shutter_trailing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.60"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/constraint_guideline_vertical_change_leading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="280dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/constraint_guideline_vertical_trailing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.85"/>
+        <!--endregion-->
+        <!--region Horizontal Guidlines-->
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/constraint_guideline_horizontal_top"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.05" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/constraint_guideline_horizontal_shutter_bottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.95" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/constraint_guideline_horizontal_bottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.95" />
+        <!--endregion-->
+        <!--endregion-->
+
+
+        <SurfaceView
+            android:id="@+id/surfaceView"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+        <androidx.camera.view.PreviewView
+            android:id="@+id/preview_view"
+            android:layout_width="0px"
+            android:layout_height="0px"
+            android:visibility="gone"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/button_lens_flip"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/ic_change_aura"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/ic_flens_flip"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintTop_toTopOf="@id/button_shutter_record"
+            app:layout_constraintStart_toStartOf="@id/constraint_guideline_vertical_leading"
+            app:layout_constraintEnd_toEndOf="@id/constraint_guideline_vertical_leading1"
+            app:layout_constraintBottom_toBottomOf="@id/button_shutter_record" />
+
+        <TextView
+            android:id="@+id/tvSecondeCouter_Video"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/pulpdisplay_light"
+            android:text="0"
+            android:layout_marginBottom="@dimen/_5sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/button_shutter_record"
+            android:textSize="@dimen/_15sdp"
+            android:textColor="@color/white"
+            />
+
+        <Button
+            android:id="@+id/button_shutter_record"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@null"
+            android:scaleType="fitXY"
+            app:backgroundTint="@null"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintStart_toStartOf="@id/constraint_guideline_vertical_shutter_leading"
+            app:layout_constraintEnd_toEndOf="@id/constraint_guideline_vertical_shutter_trailing"
+            app:layout_constraintBottom_toBottomOf="@id/constraint_guideline_horizontal_shutter_bottom" />
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/button_close"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/ic_change_aura"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/ic_change"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintTop_toTopOf="@id/button_shutter_record"
+            app:layout_constraintStart_toStartOf="@id/constraint_guideline_vertical_change_leading"
+            app:layout_constraintEnd_toEndOf="@id/constraint_guideline_vertical_trailing"
+            app:layout_constraintBottom_toBottomOf="@id/button_shutter_record" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:id="@+id/liveAlertll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:orientation="horizontal"
+        tools:ignore="MissingConstraints">
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profile_Image"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:src="@drawable/applogo"
+            android:layout_gravity="center" />
+        <LinearLayout
+            android:layout_width="@dimen/_220sdp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_7sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvUsername_Pd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+              android:fontFamily="@font/pulpdisplay_bold"
+                android:gravity="center_vertical"
+                android:text="Katie Sims"
+                android:textColor="@color/txttitle"
+                android:textSize="@dimen/_12sdp"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:id="@+id/tvEmotionShared_pd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:gravity="center_vertical"
+                android:fontFamily="@font/pulpdisplay_semibold"
+                android:text="Relaxing and empowering."
+                android:textColor="@color/txttitle"
+                android:textSize="@dimen/_10sdp"
+                tools:ignore="MissingConstraints" />
+
+
+        </LinearLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

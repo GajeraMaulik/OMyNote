@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/pdcardView"
+        android:layout_width="@dimen/_135sdp"
+        android:layout_height="@dimen/_180sdp"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="@dimen/_10sdp"
+        android:padding="@dimen/_5sdp"
+        app:cardCornerRadius="@dimen/_10sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.49">
+
+        <RelativeLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+            app:backgroundTint="@null"
+    android:background="@android:color/transparent"
+    >
+            <ImageView
+                android:id="@+id/pdImage"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_100sdp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true"
+                android:src="@drawable/applogo"
+                android:scaleType="fitCenter"/>
+
+            <ProgressBar
+                android:id="@+id/progress_bar"
+                android:layout_width="@dimen/_35sdp"
+                android:layout_height="@dimen/_35sdp"
+                style="@style/CircularDeterminateProgressBar"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:indeterminateOnly="false"
+                android:progress="66"
+                android:progressDrawable="@drawable/bg_fill_progress"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true"
+                />
+
+            <TextView
+                android:id="@+id/percentage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/_12sdp"
+                android:fontFamily="@font/pulpdisplay_regular"
+                android:layout_alignStart="@+id/progress_bar"
+                android:layout_alignTop="@+id/progress_bar"
+                android:layout_alignBottom="@+id/progress_bar"
+                android:layout_alignEnd="@+id/progress_bar"
+                android:textAlignment="center"
+
+                android:textColor="#000F4B"
+                android:text="72%"
+                android:textSize="@dimen/_5sdp"/>
+            <TextView
+                android:id="@+id/monthName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAllCaps="true"
+                android:paddingTop="@dimen/_5sdp"
+                android:fontFamily="@font/pulpdisplay_regular"
+                android:layout_alignStart="@+id/progress_bar"
+                android:layout_alignTop="@+id/progress_bar"
+                android:layout_alignBottom="@+id/progress_bar"
+                android:layout_alignEnd="@+id/progress_bar"
+                android:gravity="center"
+                android:textColor="@color/unselectedlogo"
+                android:text="March"
+                android:textSize="@dimen/_5sdp"/>
+
+            <CheckBox
+                android:id="@+id/itemFavorite"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:padding="@dimen/_10sdp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:button="@drawable/pd_selector"
+                android:checked="true"
+                app:useMaterialThemeColors="false" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:background="@color/selectitem"
+        android:layout_below="@+id/pdImage">
+
+        <TextView
+            android:id="@+id/pdName"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_25sdp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="@dimen/_12sdp"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:layout_marginEnd="@dimen/_12sdp"
+            android:layout_marginBottom="@dimen/_12sdp"
+            android:fontFamily="@font/pulpdisplay_bold"
+            android:text="Replica Whispers"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_12sdp" />
+
+        <TextView
+            android:id="@+id/pdSubName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/pdName"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="@dimen/_12sdp"
+            android:layout_marginEnd="@dimen/_12sdp"
+            android:layout_marginBottom="@dimen/_12sdp"
+            android:fontFamily="@font/pulpdisplay_mediumd"
+            android:text="Maison Margiela"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_10sdp" />
+
+    </RelativeLayout>
+</RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

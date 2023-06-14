@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context=".Views.OnboardingActivity">
+
+    <RelativeLayout
+        android:id="@+id/title_boarding"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_7sdp"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints">
+
+
+        <ImageView
+            android:id="@+id/icLogo_boarding"
+            android:layout_width="@dimen/_35sdp"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_alignParentStart="true"
+            android:src="@drawable/applogo"/>
+
+        <TextView
+            android:id="@+id/appTitle_boarding"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/icLogo_boarding"
+            android:textAllCaps="true"
+            android:textSize="@dimen/_15sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:fontFamily="@font/pulpdisplay_mediumd"
+            android:layout_centerVertical="true"
+            android:textColor="@color/white"
+            android:text="@string/app_name"/>
+
+        <TextView
+            android:id="@+id/tvSkip_boarding"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:textAllCaps="true"
+            android:textSize="@dimen/_12sdp"
+            android:fontFamily="@font/pulpdisplay_mediumd"
+            android:layout_centerVertical="true"
+            android:textColor="@color/white"
+            android:text="@string/tvSkip_boarding"/>
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:background="@android:color/transparent"
+        android:backgroundTint="@android:color/transparent"
+        app:backgroundTint="#00000000"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title_boarding"
+
+        tools:ignore="MissingConstraints">
+        <ImageView
+            android:id="@+id/animation_boarding"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_300sdp"
+            android:scaleX="1.5"
+            android:scaleY="1.5"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_15sdp"
+            tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/mainTitle_boarding"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/animation_boarding"
+        android:lineHeight="@dimen/_45sdp"
+        android:fontFamily="@font/pulpdisplay_regular"
+        android:textSize="@dimen/_35sdp"
+        android:gravity="center"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@+id/animation_boarding"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/subTitle_boarding"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/mainTitle_boarding"
+        android:layout_marginTop="@dimen/_25sdp"
+        android:fontFamily="@font/pulpdisplay_regular"
+        android:textSize="@dimen/_15sdp"
+        android:gravity="center"
+        android:textColor="@color/bgsubtitle"
+        app:layout_constraintTop_toBottomOf="@+id/mainTitle_boarding"
+        tools:ignore="MissingConstraints" />
+
+
+        <Button
+            android:id="@+id/btnContinue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/subTitle_boarding"
+            android:layout_marginTop="@dimen/_85sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:visibility="gone"
+            android:fontFamily="@font/pulpdisplay_regular"
+            android:background="@drawable/bg_continue"
+            android:textAllCaps="false"
+            android:text="Continue"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_15sdp"
+            app:backgroundTint="@null"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/btnContinues"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/subTitle_boarding"
+        android:layout_marginTop="@dimen/_85sdp"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:visibility="gone"
+        android:fontFamily="@font/pulpdisplay_regular"
+        android:background="@drawable/bg_bd_continue"
+        android:textAllCaps="false"
+        android:text="Continue"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_15sdp"
+        app:backgroundTint="@null"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/subTitle_boarding" />
+    </RelativeLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

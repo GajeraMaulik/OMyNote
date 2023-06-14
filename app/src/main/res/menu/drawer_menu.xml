@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+
+            android:checkable="true"
+            android:checked="true"
+            android:title="Dashboard" />
+        <item
+            android:id="@+id/nav_favorite"
+            android:title="Your favorites" />
+        <item
+            android:id="@+id/nav_Person"
+            android:title="Profile" />
+        <item
+            android:id="@+id/nav_Science"
+            android:title="Your previous scents" />
+        <item
+            android:id="@+id/nav_Share"
+            android:title="Share" />
+        <item
+            android:id="@+id/nav_feedBack"
+            android:title="Please share your feedback" />
+
+
+    </group>
+    <group android:checkableBehavior="single" >
+
+        <item
+            android:id="@+id/nav_Delete"
+            android:title="Delete Account"/>
+        <item android:id="@+id/nav_Logout"
+            android:title="Logout"/>
+    </group>
+
+</menu>

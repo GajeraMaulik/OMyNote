@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context=".Views.ShareStoryActivity">
+
+    <RelativeLayout
+        android:id="@+id/title_Share"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_10sdp"
+        tools:ignore="MissingConstraints">
+        <ImageView
+            android:id="@+id/btnBack_Share"
+            android:layout_width="@dimen/_15sdp"
+            android:layout_height="@dimen/_15sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_alignParentStart="true"
+            android:src="@drawable/ic_left"/>
+        <TextView
+            android:id="@+id/tvUserName_Share"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_15sdp"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:fontFamily="@font/pulpdisplay_light"
+            android:textColor="@color/white"
+            android:text=""/>
+        <TextView
+            android:id="@+id/tvSkip_Share"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:textAllCaps="true"
+            android:textSize="@dimen/_12sdp"
+            android:fontFamily="@font/pulpdisplay_mediumd"
+            android:layout_centerVertical="true"
+            android:textColor="@color/white"
+            android:text="@string/tvSkip_boarding"/>
+
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:background="@android:color/transparent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title_Share"
+        app:layout_constraintBottom_toTopOf="@+id/bottomTitle_Share"
+        tools:ignore="MissingConstraints">
+        <ImageView
+            android:id="@+id/animation_Share"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_300sdp"
+            android:scaleX="1.5"
+            android:scaleY="1.5"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_15sdp"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/mainTitle_Share"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/animation_Share"
+            android:lineHeight="@dimen/_45sdp"
+            android:fontFamily="@font/pulpdisplay_bold"
+            android:textSize="@dimen/_35sdp"
+            android:gravity="center"
+            android:textColor="@color/white"
+            app:layout_constraintTop_toBottomOf="@+id/animation_Share"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/subTitle_Share"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/mainTitle_Share"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:fontFamily="@font/pulpdisplay_light"
+            android:textSize="@dimen/_14sdp"
+            android:gravity="center"
+            android:textColor="@color/bgsubtitle"
+            tools:ignore="MissingConstraints" />
+
+
+        <Button
+            android:id="@+id/btnMic"
+            android:layout_width="@dimen/_85sdp"
+            android:layout_height="@dimen/_42sdp"
+            android:layout_below="@+id/subTitle_Share"
+            android:layout_alignParentStart="true"
+            android:visibility="gone"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_75sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:background="@drawable/bg_btn_story"
+            android:padding="@dimen/_30sdp"
+            app:backgroundTint="@null"
+            app:icon="@drawable/microphone_logo"
+            app:iconSize="@dimen/_25sdp" />
+
+            <Button
+                android:id="@+id/btnVideo"
+                android:layout_width="@dimen/_85sdp"
+                android:layout_height="@dimen/_42sdp"
+                android:layout_toEndOf="@+id/btnMic"
+                android:layout_marginTop="@dimen/_75sdp"
+                android:layout_below="@+id/subTitle_Share"
+                android:visibility="gone"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:padding="@dimen/_30sdp"
+                app:icon="@drawable/video_logo"
+                app:iconSize = "@dimen/_25sdp"
+                app:backgroundTint="@null"
+                android:background="@drawable/bg_btn_story"
+                />
+
+
+
+            <Button
+                android:id="@+id/btnSms"
+                android:layout_width="@dimen/_85sdp"
+                android:layout_height="@dimen/_42sdp"
+                android:layout_toEndOf="@+id/btnVideo"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_75sdp"
+                android:visibility="gone"
+                android:layout_below="@+id/subTitle_Share"
+                android:padding="@dimen/_30sdp"
+                app:icon="@drawable/sms_logo"
+                app:iconSize = "@dimen/_25sdp"
+                app:backgroundTint="@null"
+                android:background="@drawable/bg_btn_story"
+                />
+
+
+
+
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/bottomTitle_Share"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_25sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:text="We will not store materials or\n
+personal data that you share with us."
+        android:fontFamily="@font/pulpdisplay_regular"
+        android:textSize="@dimen/_12sdp"
+        android:gravity="center"
+        android:textColor="@color/bgsubtitle"
+        tools:ignore="MissingConstraints" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

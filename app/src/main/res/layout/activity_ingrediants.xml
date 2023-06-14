@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context=".Views.IngrediantsActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolBar_Uprec"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/pulpdisplay_regular"
+            android:textAllCaps="true"
+            android:textSize="@dimen/_15sdp"
+            android:textColor="@color/white"
+            android:text="SHARE"/>
+
+        <ImageView
+            android:id="@+id/icClose_ingrediant"
+            android:layout_width="@dimen/_15sdp"
+            android:layout_height="@dimen/_15sdp"
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:layout_gravity="end"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/ic_close_wt"/>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_recoding"
+        android:layout_marginTop="@dimen/_70sdp"
+        android:layout_alignParentBottom="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolBar_Uprec"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:id="@+id/tvSelectTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:text="These are your selected scents,\n Choose 3 or more"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:textColor="@color/txttitle"
+            android:fontFamily="@font/pulpdisplay_extrabold"
+            android:textSize="@dimen/_16sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/nestedScroll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/_55sdp"
+            android:layout_marginBottom="@dimen/_80sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvSelectTitle"
+            app:layout_constraintBottom_toTopOf="@+id/viewBtnNext_ingrediant"
+
+            tools:ignore="UnknownId">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvResultatList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="@dimen/_10sdp"
+
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            tools:listitem="@layout/view_ingrediant"
+            android:layout_marginTop="@dimen/_60sdp"
+            app:spanCount="3"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+
+            app:layout_constraintBottom_toTopOf="@+id/cdAddItem_View"
+            tools:ignore="MissingConstraints" />
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cdAddItem_View"
+            android:layout_width="match_parent"
+
+            android:layout_height="@dimen/_65sdp"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_20sdp"
+            android:layout_marginBottom="@dimen/_30sdp"
+            android:backgroundTint="@color/white"
+            app:cardCornerRadius="@dimen/_15sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            tools:ignore="MissingConstraints,NotSibling">
+
+
+            <TextView
+                android:id="@+id/tvAdd_ingrediant"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:layout_marginStart="@dimen/_12sdp"
+                android:fontFamily="@font/pulpdisplay_regular"
+                android:text="Didn’t find the scent you’d like \nto include? Add it!"
+                android:textColor="@color/txttitle"
+                android:textSize="@dimen/_13sdp"
+                tools:ignore="MissingConstraints" />
+
+
+            <Button
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                app:icon="@drawable/ic_add"
+                app:iconSize = "@dimen/_20sdp"
+                android:enabled="true"
+                style="@style/Widget.MaterialComponents.Button.Icon"
+                android:background="@drawable/bg_additem"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_gravity="end|center_vertical"
+                />
+
+
+        </androidx.cardview.widget.CardView>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
+        <RelativeLayout
+            android:id="@+id/viewBtnNext_ingrediant"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_80sdp"
+            android:background="@drawable/bg_btn_text"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/btnPrevious"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_12sdp"
+
+                android:clickable="true"
+                android:layout_centerVertical="true"
+                android:layout_alignTop="@+id/btnNext_ingrediant"
+                android:layout_alignBottom="@+id/btnNext_ingrediant"
+                android:gravity="center"
+                android:orientation="horizontal">
+            <ImageView
+                android:id="@+id/ic_left_Ingrediant"
+                android:layout_width="@dimen/_15sdp"
+                android:layout_height="@dimen/_15sdp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_back_left"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@id/ic_left_Ingrediant"
+                android:fontFamily="@font/pulpdisplay_regular"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:textAllCaps="true"
+                android:textSize="@dimen/_15sdp"
+                android:textColor="@color/colorPrimary"
+                android:text="previous"/>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnNext_ingrediant"
+                android:layout_width="@dimen/_90sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginTop="@dimen/_25sdp"
+                android:layout_marginEnd="@dimen/_20sdp"
+                app:icon="@drawable/leftarrow"
+                app:iconSize = "@dimen/_10sdp"
+                style="@style/Widget.MaterialComponents.Button.Icon"
+                android:layout_alignParentEnd="true"
+                android:layout_gravity="end|bottom"
+                app:iconGravity="textEnd"
+                app:iconPadding="@dimen/_10sdp"
+
+                android:background="@drawable/bg_btn_disable"
+                android:fontFamily="@font/pulpdisplay_bold"
+                android:text="Next"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_10sdp"
+                app:backgroundTint="@null" />
+            <Button
+                android:id="@+id/btnNextUn_ingrediant"
+                android:layout_width="@dimen/_90sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginTop="@dimen/_25sdp"
+                android:layout_marginEnd="@dimen/_20sdp"
+                app:icon="@drawable/ic_right_unselected"
+                android:visibility="gone"
+
+                app:iconSize = "@dimen/_10sdp"
+                android:enabled="true"
+                style="@style/Widget.MaterialComponents.Button.Icon"
+                android:layout_alignParentEnd="true"
+                android:layout_gravity="end|bottom"
+                app:iconGravity="textEnd"
+                app:iconPadding="@dimen/_10sdp"
+                android:background="@drawable/bg_btn_disable"
+                android:fontFamily="@font/pulpdisplay_bold"
+                android:text="Next"
+                android:textAllCaps="true"
+                android:textColor="@color/txtsubtitle"
+                android:textSize="@dimen/_10sdp"
+                app:backgroundTint="@null" />
+
+        </RelativeLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bgLogin"
+    tools:context=".Views.RegisterActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolBar_Register"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints">
+
+        <ImageView
+            android:id="@+id/icBack_Register"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:visibility="gone"
+            android:src="@drawable/applogo"
+            tools:ignore="MissingConstraints" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/pulpdisplay_regular"
+
+            android:textAllCaps="true"
+            android:textSize="@dimen/_15sdp"
+            android:textColor="@color/txttitle"
+            android:text="sign up"/>
+
+
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedScroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:layout_marginTop="@dimen/_50sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolBar_Register"
+        tools:ignore="UnknownId">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/nestedScroll_View"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:paddingBottom="@dimen/_50sdp">
+
+
+            <TextView
+                android:id="@+id/tvFirstname_Register"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:textAllCaps="true"
+                android:fontFamily="@font/pulpdisplay_regular"
+                android:gravity="center_vertical"
+                android:text="first name"
+                android:textColor="@color/txttitle"
+                android:textSize="@dimen/_10sdp"
+                tools:ignore="MissingConstraints"/>
+
+            <EditText
+                android:id="@+id/etFirstname_Register"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:focusable="true"
+                android:background="@drawable/bg_edittext"
+                android:drawablePadding="@dimen/_9sdp"
+                android:ems="10"
+                android:fontFamily="@font/pulpdisplay_regular"
+                android:text=""
+                android:inputType="text"
+                android:padding="@dimen/_2sdp"
+                android:paddingStart="@dimen/_14sdp"
+                android:textColor="@color/txttitle"
+
+                android:textColorHint="@color/txtsubtitle"
+                android:textSize="@dimen/_12sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvFirstname_Register"
+                tools:ignore="Autofill,RtlSymmetry" />
+            <TextView
+                android:id="@+id/tvErrorfName_Register"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:fontFamily="@font/pulpdisplay_regular"
+                android:layout_marginTop="@dimen/_7sdp"
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:gravity="center_vertical"
+                android:text="Invalid name"
+                app:layout_constraintTop_toBottomOf="@+id/etFirstname_Register"
+                android:textColor="@color/error"
+                android:textSize="@dimen/_10sdp"
+                tools:ignore="MissingConstraints"/>
+
+            <TextView
+                android:id="@+id/tvLastname_Register"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:fontFamily="@font/pulpdisplay_regular"
+                android:layout_marginTop="@dimen/_25sdp"
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:textAllCaps="true"
+                android:gravity="center_vertical"
+                android:text="last name"
+                app:layout_constraintTop_toBottomOf="@+id/etFirstname_Register"
+                android:textColor="@color/txttitle"
+                android:textSize="@dimen/_10sdp"
+                tools:ignore="MissingConstraints"/>
+
+            <EditText
+                android:id="@+id/etLastname_Register"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginEnd="@dimen/_15sdp"
+
+                android:background="@drawable/bg_edittext"
+                android:fontFamily="@font/pulpdisplay_regular"
+                android:drawablePadding="@dimen/_9sdp"
+                android:ems="10"
+
+                android:text=""
+                android:inputType="text"
+                android:padding="@dimen/_2sdp"
+                android:paddingStart="@dimen/_14sdp"
+                android:textColor="@color/txttitle"
+
+                android:textColorHint="@color/txtsubtitle"
+                android:textSize="@dimen/_12sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvLastname_Register"
+                tools:ignore="Autofill,RtlSymmetry" />
+
+            <TextView
+                android:id="@+id/tvErrorlName_Login"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:fontFamily="@font/pulpdisplay_regular"
+                android:layout_marginTop="@dimen/_7sdp"
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:gravity="center_vertical"
+                android:text="Invalid name"
+                app:layout_constraintTop_toBottomOf="@+id/etLastname_Register"
+                android:textColor="@color/error"
+                android:textSize="@dimen/_10sdp"
+                tools:ignore="MissingConstraints"/>
+            <TextView
+                android:id="@+id/tvEmail_Register"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:fontFamily="@font/pulpdisplay_regular"
+                android:layout_marginTop="@dimen/_25sdp"
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:textAllCaps="true"
+                android:gravity="center_vertical"
+                android:text="your email"
+                app:layout_constraintTop_toBottomOf="@+id/etLastname_Register"
+                android:textColor="@color/txttitle"
+                android:textSize="@dimen/_10sdp"
+                tools:ignore="MissingConstraints"/>
+
+            <EditText
+                android:id="@+id/etEmail_Register"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginEnd="@dimen/_15sdp"
+
+                android:background="@drawable/bg_edittext"
+                android:fontFamily="@font/pulpdisplay_regular"
+                android:drawablePadding="@dimen/_9sdp"
+                android:ems="10"
+
+                android:text=""
+                android:inputType="textEmailAddress"
+                android:padding="@dimen/_2sdp"
+                android:paddingStart="@dimen/_14sdp"
+                android:textColor="@color/txttitle"
+
+                android:textColorHint="@color/txtsubtitle"
+                android:textSize="@dimen/_12sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvEmail_Register"
+                tools:ignore="Autofill,RtlSymmetry" />
+
+            <TextView
+                android:id="@+id/tvErroreEmail_Login"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:fontFamily="@font/pulpdisplay_regular"
+                android:layout_marginTop="@dimen/_7sdp"
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:gravity="center_vertical"
+                android:text="Invalid email"
+                app:layout_constraintTop_toBottomOf="@+id/etEmail_Register"
+                android:textColor="@color/error"
+                android:textSize="@dimen/_10sdp"
+                tools:ignore="MissingConstraints"/>
+            <TextView
+                android:id="@+id/tvPassword_Login"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:fontFamily="@font/pulpdisplay_regular"
+                android:layout_marginTop="@dimen/_30sdp"
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:textAllCaps="true"
+                android:gravity="center_vertical"
+                android:text="password"
+                app:layout_constraintTop_toBottomOf="@+id/etEmail_Register"
+                android:textColor="@color/txttitle"
+                android:textSize="@dimen/_10sdp"
+                tools:ignore="MissingConstraints"/>
+
+            <EditText
+                android:id="@+id/etPassword_Register"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginEnd="@dimen/_15sdp"
+
+                android:background="@drawable/bg_edittext"
+                android:fontFamily="@font/pulpdisplay_regular"
+                android:drawablePadding="@dimen/_9sdp"
+                android:ems="10"
+
+                android:text=""
+                android:inputType="textPassword"
+                android:padding="@dimen/_2sdp"
+                android:paddingStart="@dimen/_14sdp"
+                android:textColor="@color/txttitle"
+
+                android:textColorHint="@color/txtsubtitle"
+                android:textSize="@dimen/_12sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvPassword_Login"
+                tools:ignore="Autofill,RtlSymmetry" />
+
+            <TextView
+                android:id="@+id/tvErrorpass_Register"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/pulpdisplay_regular"
+                android:visibility="gone"
+                android:layout_marginTop="@dimen/_7sdp"
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:gravity="center_vertical"
+                android:text="Invalid Password"
+                app:layout_constraintTop_toBottomOf="@+id/etPassword_Register"
+                android:textColor="@color/error"
+                android:textSize="@dimen/_10sdp"
+                tools:ignore="MissingConstraints"/>
+            <ImageView
+                android:id="@+id/ivEye_Register"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_gravity="center"
+                android:foregroundGravity="center"
+                android:padding="@dimen/_5sdp"
+                android:paddingEnd="@dimen/_6sdp"
+                app:layout_constraintBottom_toBottomOf="@+id/etPassword_Register"
+                app:layout_constraintEnd_toEndOf="@+id/etPassword_Register"
+                app:layout_constraintTop_toTopOf="@+id/etPassword_Register"
+                app:srcCompat="@drawable/ic_visibility_off_eye"
+                tools:ignore="ContentDescription,RtlHardcoded,RtlSymmetry" />
+            <TextView
+                android:id="@+id/tvChar_Register"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/pulpdisplay_regular"
+                android:layout_marginTop="@dimen/_25sdp"
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:layout_marginStart="@dimen/_25sdp"
+                android:gravity="center_vertical"
+                android:text="\u25CF 8 characters minimum"
+                app:layout_constraintTop_toBottomOf="@+id/etPassword_Register"
+                android:textColor="@color/txtsubtitle"
+                android:textSize="@dimen/_10sdp"
+                tools:ignore="MissingConstraints"/>
+            <TextView
+                android:id="@+id/tvSchar_Register"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/pulpdisplay_regular"
+                android:layout_marginTop="@dimen/_7sdp"
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:layout_marginStart="@dimen/_25sdp"
+                android:gravity="center_vertical"
+                android:text="\u25CF 1 special character (ex: !@_)"
+                app:layout_constraintTop_toBottomOf="@+id/tvChar_Register"
+                android:textColor="@color/txtsubtitle"
+                android:textSize="@dimen/_10sdp"
+                tools:ignore="MissingConstraints"/>
+
+            <TextView
+                android:id="@+id/tvTerms_Register"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:fontFamily="@font/pulpdisplay_regular"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:gravity="center_vertical"
+                android:text="Terms of use"
+                app:layout_constraintTop_toBottomOf="@+id/tvSchar_Register"
+                android:textColor="@color/txttitle"
+                android:textSize="@dimen/_12sdp"
+                tools:ignore="MissingConstraints"/>
+            <CheckBox
+                android:id="@+id/checkBox_Register"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_24sdp"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:button="@drawable/checkbox_uncheck"
+                android:layout_marginBottom="@dimen/_15sdp"
+                android:buttonTint="@color/bglogin"
+                android:fontFamily="@font/pulpdisplay_regular"
+                android:gravity="fill"
+                android:paddingStart="@dimen/_6sdp"
+                android:text="@string/signup_checkbox"
+                android:textColor="@color/bglogin"
+                android:textSize="@dimen/_12sdp"
+                app:layout_constraintTop_toBottomOf="@+id/tvTerms_Register"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:ignore="RtlSymmetry,UnusedAttribute" />
+
+
+            <TextView
+                android:id="@+id/tvErrorCheck_Register"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/pulpdisplay_regular"
+                android:visibility="gone"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:layout_marginStart="@dimen/_40sdp"
+                android:gravity="center_vertical"
+                android:text="Please accept the User Terms"
+                app:layout_constraintTop_toBottomOf="@+id/checkBox_Register"
+                android:textColor="@color/error"
+                android:textSize="@dimen/_10sdp"
+                tools:ignore="MissingConstraints"/>
+
+            <Button
+                android:id="@+id/btnSignup_Login"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/pulpdisplay_regular"
+                android:layout_marginTop="@dimen/_25sdp"
+
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:background="@drawable/bg_continue"
+                android:textAllCaps="true"
+                android:text="sign up"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_10sdp"
+                app:backgroundTint="@null"
+                app:layout_constraintTop_toBottomOf="@+id/checkBox_Register"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

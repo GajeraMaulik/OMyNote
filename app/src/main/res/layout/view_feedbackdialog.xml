@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="@dimen/_10sdp"
+    app:cardBackgroundColor="@color/transparent"
+    android:background="@color/transparent"
+    android:backgroundTint="@color/transparent"
+    >
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:background="@color/bgLogins"
+        app:cardCornerRadius="@dimen/_10sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            android:background="@color/transparent"
+            app:cardCornerRadius="@dimen/_10sdp"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteY="0dp">
+
+            <TextView
+                android:id="@+id/rating_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:fontFamily="@font/pulpdisplay_bold"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:paddingStart="@dimen/_10sdp"
+                android:text=""
+                android:textColor="#A89701"
+                android:textSize="@dimen/_15sdp"
+
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="7dp" />
+
+            <ImageView
+                android:id="@+id/icClose_fb"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_marginEnd="@dimen/_35sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/ic_close"/>
+
+            <RatingBar
+                android:id="@+id/ratingBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:rating="0"
+                android:progressTint="#F8DF01"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/rating_title"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="5dp"
+                android:numStars="5"
+                android:stepSize="1"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/txtSub_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/etFeed"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:fontFamily="@font/pulpdisplay_light"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:textAlignment="center"
+                android:text="We need your help to improve our algorithm \npredictions"
+                android:textColor="@color/txttitle"
+                android:textSize="@dimen/_10sdp"
+
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="7dp" />
+
+
+                <EditText
+                    android:id="@+id/etFeed"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_100sdp"
+                    android:layout_below="@+id/ratingBar"
+                    android:autoSizeTextType="uniform"
+                    android:layout_marginTop="@dimen/_7sdp"
+                    android:layout_marginStart="@dimen/_13sdp"
+                    android:layout_marginEnd="@dimen/_13sdp"
+                    android:background="@drawable/bg_et_round"
+                    android:paddingTop="@dimen/_10sdp"
+                    android:focusable="true"
+                    android:inputType="textMultiLine"
+                    android:drawablePadding="@dimen/_10sdp"
+                    android:importantForAutofill="no"
+                    android:hint="what do we need to enhance"
+                    android:gravity="top"
+                    android:lines="10"
+                    android:lineHeight="@dimen/_15sdp"
+                    android:padding="@dimen/_5sdp"
+                    android:paddingStart="@dimen/_10sdp"
+                    android:textColor="@color/txttitle"
+                    android:textColorHint="@color/unselectedlogo"
+                    android:textSize="@dimen/_13sdp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="Autofill,KeyboardInaccessibleWidget,MissingConstraints,RtlSymmetry,UnusedAttribute" />
+
+
+
+
+
+
+            <Button
+                android:id="@+id/btnSend"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtSub_title"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/bg_btn"
+                android:fontFamily="@font/pulpdisplay_regular"
+                android:gravity="center_horizontal|center_vertical"
+                android:text="SEND"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_13sdp"
+                android:visibility="visible"
+                app:backgroundTint="@null"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:ignore="MissingConstraints" />
+
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.cardview.widget.CardView>
